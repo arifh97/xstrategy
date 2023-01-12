@@ -1,0 +1,10 @@
+$theme-colors: (
+    "info": tomato,
+    "danger": teal,
+    "primary": blue,
+    "success": green,
+    'warning': orange,
+    'secondary': black,
+);
+@import "~bootstrap/scss/bootstrap";
+@import '../src/assets/scss/style.scss';
