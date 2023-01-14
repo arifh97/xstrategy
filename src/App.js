@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Banner from './components/Banner';
 import BlockChainBank from './components/BlockChainBank';
-import Brands from './components/Brands';
+// import Brands from './components/Brands';
 import Features from './components/Features';
 import Footer from './components/Footer';
 import Header from './components/Header';
@@ -15,7 +15,7 @@ export default class App extends Component {
       <>
         <Header />
         <Banner />
-        <Brands />
+        {/* <Brands /> */}
         <WhatWeDo />
         <Services />
         <Features />

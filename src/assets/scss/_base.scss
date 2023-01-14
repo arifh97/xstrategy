@@ -1,10 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900;1000&display=swap');
+
 body {
-    font-size: 16px;
-    font-weight: 400;
+    font-family: 'Mulish', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
     line-height: 1.5;
-    color: rgba(0, 0, 0, .7);
-    overflow: scroll;
-    overflow-x: hidden;
+    color: $text;
+    background-color: #070A1B;
+
+    @include sm {
+        font-size: 16px;
+    }
 }
 
 html,
@@ -19,12 +25,12 @@ h4,
 h5,
 h6 {
     font-family: inherit;
-    font-weight: 500;
+    font-weight: 700;
     margin: 0 0 10px;
 }
 
 p {
-    margin: 0 0 5px;
+    margin: 0;
 }
 
 img {
@@ -77,4 +83,99 @@ input::-webkit-inner-spin-button {
 
 input[type=number] {
     -moz-appearance: textfield;
+}
+
+.fw {
+    &-medium {
+        font-weight: 500 !important;
+    }
+}
+
+.container {
+    @media only screen and (min-width:1440px) {
+        max-width: 1350px;
+    }
+}
+
+.btn {
+    --bs-btn-font-size: 18px;
+    --bs-btn-font-weight: 600;
+    --bs-btn-border-radius: 100px;
+    --bs-btn-font-family: 'Mulish', sans-serif;
+    --bs-btn-padding-x: 40px;
+    --bs-btn-padding-y: 15px;
+
+    &>* {
+        margin-left: 8px;
+    }
+}
+
+.meta_text {
+    border-radius: 4px;
+    padding: 4px 10px;
+    background-color: $gray-800;
+}
+
+:root {
+    --section-padding: 120px;
+    --cta:160px;
+}
+
+.section {
+    &-padding {
+        padding: var(--section-padding) 0px;
+    }
+
+    &-title {
+        margin-bottom: 60px;
+
+        & span {
+            background-color: $gray-100;
+            letter-spacing: 0.1em;
+            border-radius: 5px;
+            padding: 4px 10px;
+
+            &.dark {
+                background-color: $secondary
+            }
+        }
+
+        & h2 {
+            @include font-70;
+            font-weight: 900;
+            color: $secondary;
+            &.dark{
+                color: $th-white
+            }
+        }
+
+        & p {
+            @include font-20;
+            color: $text-2;
+            &.dark{
+                color: $text;
+            }
+        }
+    }
+}
+
+// common shape
+.shape {
+    &::before,
+    &::after {
+        --width: 510px;
+        content: "";
+        width: var(--width);
+        height: var(--width);
+        border-radius: 100%;
+        position: absolute;
+        background: linear-gradient(92.7deg, #2A56DE -2.63%, #E1A83C 102.94%, #C8AA72 102.94%);
+        filter: blur(215px);
+        transform: rotate(90deg);
+        z-index: -1;
+        opacity: .5;
+    }
+}
+.text-white-2{
+    color: $th-white !important;
 }

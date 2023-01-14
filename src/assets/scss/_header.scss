@@ -1,0 +1,39 @@
+.site-logo{
+    width: auto;
+    height: 100px;
+    & img{
+        width: auto;
+        height: 100%;
+    }
+}
+.heading{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9;
+    padding: 30px 0px;
+    & .nav{
+        border: 1px solid $border;
+        background-color: $gray-800;
+        border-radius: 100px;
+        width: 100%;
+        padding: 20px 70px;
+        justify-content: space-between;
+        @include xl{
+            padding: 16px 30px;
+        }
+        &-item{
+            position: relative;
+        }
+        &-link{
+            display: block;
+            font-size: 18px;
+            line-height: 1.5;
+            border-radius: 100px;
+            background-color: $gray-600;
+            color: $th-white;
+            padding: 6px 22px;
+        }
+    }    
+}
