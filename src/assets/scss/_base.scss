@@ -105,6 +105,16 @@ input[type=number] {
     --bs-btn-padding-x: 40px;
     --bs-btn-padding-y: 15px;
 
+    @include md {
+        --bs-btn-padding-x: 30px;
+    }
+
+    @include sm {
+        --bs-btn-padding-x: 20px;
+        --bs-btn-padding-y: 10px;
+        --bs-btn-font-size: 16px;
+    }
+
     &>* {
         margin-left: 8px;
     }
@@ -114,11 +124,27 @@ input[type=number] {
     border-radius: 4px;
     padding: 4px 10px;
     background-color: $gray-800;
+    letter-spacing: 0.1em;
 }
 
 :root {
     --section-padding: 120px;
-    --cta:160px;
+    --cta: 160px;
+
+    @include lg {
+        --section-padding: 90px;
+        --cta: 110px;
+    }
+
+    @include md {
+        --section-padding: 60px;
+        --cta: 90px;
+    }
+
+    @include sm {
+        --section-padding: 50px;
+        --cta: 100px;
+    }
 }
 
 .section {
@@ -128,6 +154,14 @@ input[type=number] {
 
     &-title {
         margin-bottom: 60px;
+
+        @include md {
+            margin-bottom: 40px;
+        }
+
+        @include sm {
+            margin-bottom: 30px;
+        }
 
         & span {
             background-color: $gray-100;
@@ -144,7 +178,8 @@ input[type=number] {
             @include font-70;
             font-weight: 900;
             color: $secondary;
-            &.dark{
+
+            &.dark {
                 color: $th-white
             }
         }
@@ -152,7 +187,12 @@ input[type=number] {
         & p {
             @include font-20;
             color: $text-2;
-            &.dark{
+
+            @include xxxl {
+                padding: 0px 100px;
+            }
+
+            &.dark {
                 color: $text;
             }
         }
@@ -161,6 +201,7 @@ input[type=number] {
 
 // common shape
 .shape {
+
     &::before,
     &::after {
         --width: 510px;
@@ -174,8 +215,40 @@ input[type=number] {
         transform: rotate(90deg);
         z-index: -1;
         opacity: .5;
+
+        @include sm {
+            --width: 250px;
+        }
     }
 }
-.text-white-2{
+
+.text-white-2 {
     color: $th-white !important;
+}
+
+.backtop {
+    --width: 40px;
+    width: var(--width);
+    height: var(--width);
+    padding: 0;
+    border-radius: 100%;
+    @include flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 10px;
+    right: 30px;
+    z-index: 99;
+    @include hidden;
+    @include transition;
+    &.show{
+        @include show;
+        bottom: 30px;
+        @include sm{
+            bottom: 20px;
+        }
+    }
+    @include sm {
+        bottom: 20px;
+        right: 20px;
+    }
 }

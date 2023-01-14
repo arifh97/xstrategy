@@ -12,13 +12,13 @@ export default class Cta extends Component {
               <div className="cta-inner bg-primary">
                 <div className="cta-shape two"><img src={shape2} alt="" /></div>
                 <Row className='align-items-center'>
-                  <Col md="8">
+                  <Col lg="6" md="8">
                     <div className="cta-content">
                       <h3 className='mb-3'>Get in touch</h3>
                       <p>A well-thought-out international corporate structure with regulations in place will help you to avoid.</p>
                     </div>
                   </Col>
-                  <Col md="4" className='text-md-end'>
+                  <Col lg="6" md="4" className='text-md-end'>
                     <Button className='bg-white' variant='border-white'>
                       Get Started
                       <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">

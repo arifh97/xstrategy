@@ -14,12 +14,12 @@ export default class Brands extends Component {
         <div className="bg-white brands-inner">
           <Container className='position-relative'>
             <Row className='align-items-center'>
-              <Col lg="2">
+              <Col xl="2" className='d-none d-xl-block'>
                 <div className="brands-text">
                   <p>Trusted by innovative market leading Web 2.0 and Web 3.0 companies</p>
                 </div>
               </Col>
-              <Col lg="9">
+              <Col xl="9" md="12">
                 <div className="brands-badge position-absolute"><img src={badge} alt="" /></div>
                 <div className="brands-imgs d-flex flex-wrap align-items-center">
                   <div className="brands-img">

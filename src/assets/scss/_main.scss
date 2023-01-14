@@ -7,6 +7,22 @@
         padding-top: 230px;
     }
 
+    @include lg {
+        padding-top: 200px;
+    }
+
+    @include md {
+        padding-top: 180px;
+    }
+
+    @include sm {
+        padding-top: 130px;
+    }
+
+    @include ssm {
+        padding-top: 110px;
+    }
+
     &::before {
         display: none;
     }
@@ -30,6 +46,10 @@
 
     &-content {
         padding-bottom: 140px;
+
+        @include sm {
+            padding-bottom: 60px;
+        }
 
         & h1 {
             @include font-100;
@@ -63,6 +83,16 @@
         & button {
             --bs-btn-padding-y: 20px;
             min-width: 232px;
+
+            @include sm {
+                --bs-btn-padding-y: 15px;
+                min-width: 190px;
+            }
+
+            @include ssm {
+                --bs-btn-padding-y: 10px;
+                min-width: 120px;
+            }
         }
     }
 }
@@ -71,6 +101,10 @@
 .brands {
     z-index: 1;
     --brands-padding: 45px;
+
+    @include sm {
+        --brands-padding: 35px;
+    }
 
     &-inner {
         padding: var(--brands-padding) 0px;
@@ -97,6 +131,18 @@
         right: 0;
         width: var(--width);
         height: var(--width);
+
+        @include lg {
+            --width: 120px;
+        }
+
+        @include mmd {
+            --width: 80px;
+        }
+
+        @include sm {
+            right: 15px;
+        }
     }
 
     &-imgs {
@@ -109,10 +155,34 @@
         @include xl {
             gap: 30px;
         }
+
+        @include lg {
+            gap: 40px;
+        }
+
+        @include md {
+            gap: 30px;
+        }
+
+        @include sm {
+            gap: 24px;
+        }
+
+        @include ssm {
+            gap: 18px;
+        }
     }
 
     &-img {
         height: 35px;
+
+        @include mmd {
+            height: 30px;
+        }
+
+        @include ssm {
+            height: 24px;
+        }
 
         & img {
             width: 100%;
@@ -124,9 +194,32 @@
 
 // what we do
 .whatWeDo {
+    &-img {
+        @include md {
+            height: 350px;
+        }
+
+        @include sm {
+            height: 250px;
+        }
+
+        @include ssm {
+            height: 200px;
+        }
+    }
+
     &-content {
         @include xl {
             padding-left: 30px;
+        }
+
+        @include lg {
+            padding-left: 20px
+        }
+
+        @include mmd {
+            text-align: center;
+            padding-top: 30px
         }
 
         & h3 {
@@ -156,7 +249,18 @@
         top: -320px;
         left: -360px;
     }
-
+    &-logo{
+        width: 100%;
+        height: auto;
+        top: 12%;
+        left: 0;
+        padding-right: 100px;
+        text-align: center;
+        opacity: .5;
+        @include mmd{
+            padding-right: 0;
+        }
+    }
     & .whatWeDo-content {
         & p {
             color: $text;
@@ -167,8 +271,21 @@
         margin-bottom: 52px;
         padding: 10px;
 
+        @include lg {
+            margin-bottom: 34px;
+        }
+
+        @include md {
+            margin-bottom: 26px;
+        }
+
+        @include sm {
+            margin-bottom: 20px;
+        }
+
         & span {
             color: $th-white;
+            padding: 0px 10px;
         }
 
         & ul {
@@ -193,6 +310,18 @@
         background-color: $gray-800;
         border-radius: 10px;
 
+        @include md {
+            padding: 26px;
+            width: calc(50% - 1.5rem);
+            flex: 0 0 auto;
+            margin-bottom: 0px !important;
+        }
+
+        @include sm {
+            padding: 20px;
+            text-align: center;
+        }
+
         &:not(:last-child) {
             margin-bottom: 30px;
         }
@@ -205,6 +334,15 @@
             overflow: hidden;
             margin-bottom: 40px;
 
+            @include md {
+                margin-bottom: 30px;
+            }
+
+            @include sm {
+                margin: auto;
+                margin-bottom: 24px;
+            }
+
             & img,
             & svg {
                 width: 100%;
@@ -216,16 +354,34 @@
         & h4 {
             @include font-30;
             color: $th-white;
+
+            @include md {
+                @include text_ellipsis(1);
+            }
         }
 
         & p {
             &:not(:last-child) {
                 margin-bottom: 40px;
+
+                @include md {
+                    margin-bottom: 30px;
+                    font-size: 16px;
+                }
+
+                @include sm {
+                    margin-bottom: 1.5rem;
+                    font-size: 16px;
+                }
             }
         }
 
         & a {
             color: #00D1EE;
+
+            @include sm {
+                justify-content: center;
+            }
 
             &:hover {
                 color: $primary;
@@ -248,10 +404,16 @@
         opacity: .30;
     }
 
-    & .services-shape {}
-
     & .container {
         --bs-gutter-x: 40px;
+
+        @include lg {
+            --bs-gutter-x: 30px;
+        }
+
+        @include mmd {
+            --bs-gutter-x: 24px;
+        }
     }
 
     &-row {
@@ -259,6 +421,14 @@
         margin-bottom: calc(var(--bs-gutter-x) * -1);
         position: relative;
         z-index: 1;
+
+        @include lg {
+            --bs-gutter-x: 30px;
+        }
+
+        @include mmd {
+            --bs-gutter-x: 24px;
+        }
 
         &::before {
             content: "";
@@ -272,6 +442,10 @@
             left: 300px;
             z-index: -1;
             filter: blur(150px);
+            @include sm{
+                left: auto;
+                right: 0;
+            }
         }
 
         &>div {
@@ -304,6 +478,7 @@
         position: relative;
         z-index: 1;
         border-radius: 10px;
+        width: 100%;
 
         & .borderShape {
             background-color: $gray-800;
@@ -312,6 +487,10 @@
             padding: 30px;
 
             @include xl {
+                padding: 20px;
+            }
+
+            @include lg {
                 padding: 20px;
             }
         }
@@ -331,6 +510,11 @@
 
             @include xl {
                 margin-bottom: 24px;
+            }
+
+            @include sm {
+                --icon: 60px;
+                margin-bottom: 20px;
             }
         }
 
@@ -352,6 +536,21 @@
 // blockchain
 .blockchain {
     background-color: $gray-100;
+    @include sm{
+        overflow: hidden;
+    }
+    &-img {
+        @include sm {
+            height: 300px;
+            text-align: center;
+        }
+
+        & img {
+            @include sm {
+                height: 100%;
+            }
+        }
+    }
 
     &-shape {
         --width: 580px;
@@ -362,6 +561,30 @@
 
     &-content {
         padding-right: 100px;
+
+        @include xxl {
+            padding-right: 50px;
+        }
+
+        @include xl {
+            padding-right: 50px;
+        }
+
+        @include lg {
+            padding-right: 0;
+            padding-left: 0 !important;
+        }
+
+        @include mmd {
+            padding-right: 0;
+            padding-left: 0 !important;
+        }
+
+        @include sm {
+            padding-bottom: var(--section-padding);
+
+            text-align: center;
+        }
 
         & h3 {
             @include font-56;
@@ -379,7 +602,15 @@
 .legal {
     position: relative;
     z-index: 1;
-
+    padding-bottom: calc(var(--cta) + var(--section-padding));
+    @include sm{
+        padding-bottom: calc(var(--cta) + var(--section-padding) - 30px);
+    }
+    & .row{
+        @include sm{
+            flex-direction: column-reverse;
+        }
+    }
     &::before {
         content: "";
         width: 583px;
@@ -388,29 +619,78 @@
         background-color: $primary;
         filter: blur(415px);
         z-index: -1;
+        @include sm{
+            width: 100%;
+        }
+    }
+
+    &-img {
+        @include sm {
+            height: 300px;
+            text-align: center;
+        }
+
+        & img {
+            @include sm {
+                height: 100%;
+            }
+        }
+    }
+
+    & .blockchain-content {
+        @include xl {
+            padding-right: 0px;
+        }
     }
 }
 
 .cta {
     margin-top: calc(var(--cta) * -1);
     margin-bottom: 80px;
-    &-shape{
+
+    @include lg {
+        margin-bottom: 50px;
+    }
+
+    @include md {
+        margin-bottom: 20px;
+    }
+
+    @include sm {
+        margin-bottom: 10px;
+    }
+
+    &-shape {
         width: 100%;
         height: 100%;
         position: absolute;
         top: 0;
         left: 0;
         z-index: -1;
-        & img{
+
+        & img {
             @include img(cover);
         }
     }
+
     &-inner {
         padding: 100px;
         border-radius: 20px;
         overflow: hidden;
         position: relative;
-        z-index: 1;        
+        z-index: 1;
+
+        @include xl {
+            padding: 60px;
+        }
+
+        @include lg {
+            padding: 44px
+        }
+
+        @include mmd {
+            padding: 30px;
+        }
     }
 
     &-content {
@@ -422,9 +702,14 @@
         & p {
             @include font-20;
             color: $th-white;
+            
         }
-        & button,& a{
-            &:hover{
+
+        & button,
+        & a {@include sm{
+            margin-top: 24px;
+        }
+            &:hover {
                 color: $primary;
             }
         }

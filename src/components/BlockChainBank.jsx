@@ -14,10 +14,10 @@ export default class BlockChainBank extends Component {
           <Row className='align-items-center'>
             <Col md="6">
               <div className="blockchain-content">
-                <h3 className='mb-4'>Blockchain Banking</h3>
-                <p className='mb-3'>XSTRATEGY is partnered with numerous crypto-friendly banks that provide comprehensive banking services.</p>
-                <p className='mb-3'>For both established and young enterprises from the blockchain, fintech, and cryptocurrency sectors so that you can concentrate on your core business - developing and publishing games!</p>
-                <Button variant="outline-primary" className='mt-4 md-lg-5'>
+                <h3 className='mb-3 mb-md-4'>Blockchain Banking</h3>
+                <p className='mb-2 mb-md-3'>XSTRATEGY is partnered with numerous crypto-friendly banks that provide comprehensive banking services.</p>
+                <p className='mb-2 mb-md-3'>For both established and young enterprises from the blockchain, fintech, and cryptocurrency sectors so that you can concentrate on your core business - developing and publishing games!</p>
+                <Button variant="outline-primary" className='mt-3 mt-md-4 md-lg-5'>
                   Learn More <FontAwesomeIcon icon={faAngleDoubleRight} />
                 </Button>
               </div>

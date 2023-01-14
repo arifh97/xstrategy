@@ -110,13 +110,13 @@
         font-size: 40px;
     }
     @include md {
-        font-size: 36px;
+        font-size: 38px;
     }
     @include sm {
-        font-size: 30px;
+        font-size: 32px;
     }
     @include xsm {
-        font-size: 26px;
+        font-size: 28px;
     }
 }
 
@@ -127,13 +127,13 @@
         font-size: 40px;
     }
     @include lg{
-        font-size: 32px;
+        font-size: 34px;
     }
     @include md{
-        font-size: 28px;
+        font-size: 30px;
     }
     @include sm{
-        font-size: 24px;
+        font-size: 26px;
     }
 }
 
@@ -147,10 +147,10 @@
         font-size: 30px;
     }
     @include md {
-        font-size: 26px;
+        font-size: 28px;
     }
     @include sm {
-        font-size: 22px;
+        font-size: 24px;
     }
 }
 
@@ -217,4 +217,12 @@
     @include mmd {
         font-size: 16px;
     }
+}
+@mixin text_ellipsis($count){
+    overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-line-clamp: $count; 
+           line-clamp: $count; 
+   -webkit-box-orient: vertical;
 }

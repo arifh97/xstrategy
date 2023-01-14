@@ -20,13 +20,13 @@ export default class WhatWeDo extends Component {
           <Row className='align-items-center'>
             <Col lg="6" className='text-center'>
               <div className="whatWeDo-img">
-                <img src={weimg} alt="" />
+                <img className='h-100' src={weimg} alt="" />
               </div>
             </Col>
-            <Col>
+            <Col lg="6">
               <div className="whatWeDo-content">
-                <h3 className='mb-4'>Enabling Next-Generation Crypto Payments</h3>
-                <p className='mb-3'>We are subject matter experts in delivering compliant payments software and solutions that power the global web3 gaming and metaverse digital economies.</p>
+                <h3 className='mb-3 mb-md-4'>Enabling Next-Generation Crypto Payments</h3>
+                <p className='mb-2 mb-md-3'>We are subject matter experts in delivering compliant payments software and solutions that power the global web3 gaming and metaverse digital economies.</p>
                 <p>Provisioning of seamless fiat and crypto on-off ramps, digital asset payment, and fraud prevention for the Blockchain.</p>
                 <Button variant="outline-primary" className='mt-4 mt-lg-5'>
                   Learn More <FontAwesomeIcon icon={faAngleDoubleRight} />
