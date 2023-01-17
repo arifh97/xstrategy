@@ -12,11 +12,6 @@ export default class Legal extends Component {
         <Container>
           <Row className='align-items-center'>
             <Col md="6">
-              <div className="legal-img">
-                <img src={legal} alt="" />
-              </div>
-            </Col>
-            <Col md="6">
               <div className="blockchain-content ps-lg-5">
                 <h3 className='mb-4'>Legal Advisory</h3>
                 <p className='mb-3'>The legal compliance of your Web3 Gaming business is crucial for the success of your launch and ongoing gaming operations generation event (TGE).</p>
@@ -24,6 +19,11 @@ export default class Legal extends Component {
                 <Button variant="outline-primary" className='mt-4 md-lg-5'>
                   Learn More <FontAwesomeIcon icon={faAngleDoubleRight} />
                 </Button>
+              </div>
+            </Col>
+            <Col md="6">
+              <div className="legal-img">
+                <img src={legal} alt="" />
               </div>
             </Col>
           </Row>

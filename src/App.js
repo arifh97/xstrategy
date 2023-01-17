@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Banner from './components/Banner';
 import BlockChainBank from './components/BlockChainBank';
+import FamilayAdvisor from './components/FamilayAdvisor';
 // import Brands from './components/Brands';
 import Features from './components/Features';
 import Footer from './components/Footer';
@@ -20,6 +21,7 @@ export default class App extends Component {
         <Services />
         <Features />
         <BlockChainBank />
+        <FamilayAdvisor />
         <Legal />
         <Footer />
       </>
