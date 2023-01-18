@@ -15,26 +15,26 @@ export default class Brands extends Component {
           <Container className='position-relative'>
             <Row className='align-items-center'>
               <Col xl="2" className='d-none d-xl-block'>
-                <div className="brands-text">
+                <div className="brands-text" data-aos="fade-right" data-aos-duration="700">
                   <p>Trusted by innovative market leading Web 2.0 and Web 3.0 companies</p>
                 </div>
               </Col>
               <Col xl="9" md="12">
                 <div className="brands-badge position-absolute"><img src={badge} alt="" /></div>
                 <div className="brands-imgs d-flex flex-wrap align-items-center">
-                  <div className="brands-img">
+                  <div className="brands-img" data-aos="fade-up" data-aos-duration="1000">
                     <img src={img1} alt="" />
                   </div>
-                  <div className="brands-img">
+                  <div className="brands-img" data-aos="fade-up" data-aos-duration="1300">
                     <img src={img2} alt="" />
                   </div>
-                  <div className="brands-img">
+                  <div className="brands-img" data-aos="fade-up" data-aos-duration="1600">
                     <img src={img3} alt="" />
                   </div>
-                  <div className="brands-img">
+                  <div className="brands-img" data-aos="fade-up" data-aos-duration="1900">
                     <img src={img4} alt="" />
                   </div>
-                  <div className="brands-img">
+                  <div className="brands-img" data-aos="fade-up" data-aos-duration="2200">
                     <img src={img5} alt="" />
                   </div>
                 </div>

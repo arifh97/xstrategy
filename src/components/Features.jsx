@@ -80,7 +80,7 @@ export default class Features extends Component {
           <Row className='featues-row'>
             {this.state.featuresData.map((item, index) => (
               <Col lg='4' sm="6" className='text-center d-flex' key={index}>
-                <div className='featues-card d-flex'>
+                <div className='featues-card d-flex' data-aos="fade-up" data-aos-duration="1000">
                   <div className="borderShape w-100">
                     <div className="featues-card-icon mx-0" dangerouslySetInnerHTML={{__html: item.icon}}></div>
                     <h4 className="mb-3">{item.title}</h4>
