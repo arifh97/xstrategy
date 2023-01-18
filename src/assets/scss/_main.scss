@@ -222,12 +222,14 @@
 // what we do
 .whatWeDo {
   &-img {
+    padding-right: 55px;
     @include md {
       height: 350px;
     }
 
     @include sm {
       height: 250px;
+      padding-right: 0;
     }
 
     @include ssm {
