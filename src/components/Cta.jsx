@@ -9,7 +9,8 @@ export default class Cta extends Component {
         <Container>
           <Row>
             <Col sm="12">
-              <div className="cta-inner bg-primary">
+              <div className="cta-inner bg-primary" data-aos="fade-up"
+                data-aos-duration="800">
                 <div className="cta-shape two"><img src={shape2} alt="" /></div>
                 <Row className='align-items-center'>
                   <Col lg="6" md="8">

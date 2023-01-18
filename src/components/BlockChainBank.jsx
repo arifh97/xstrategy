@@ -26,7 +26,8 @@ export default class BlockChainBank extends Component {
               </div>
             </Col>
             <Col md="6">
-              <div className="blockchain-img">
+              <div className="blockchain-img"  data-aos="fade-right"
+                data-aos-duration="800">
                 <img src={blockChain} alt="" />
               </div>
             </Col>
